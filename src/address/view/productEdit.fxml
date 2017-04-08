@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="address.view.ProductEditDialogController">
+    <children>
+        <GridPane layoutX="14.0" layoutY="14.0" prefHeight="275.0" prefWidth="413.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="162.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="275.0" minWidth="10.0" prefWidth="251.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label alignment="CENTER" prefHeight="69.0" prefWidth="205.0" text="Name">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" prefHeight="215.0" prefWidth="595.0" text="Quantity" GridPane.rowIndex="1">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" prefHeight="246.0" prefWidth="613.0" text="Type" GridPane.rowIndex="2">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" prefHeight="211.0" prefWidth="454.0" text="Aviable" GridPane.rowIndex="3">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="nameField" GridPane.columnIndex="1" />
+                <TextField fx:id="quantityField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <ComboBox fx:id="typeBox" prefHeight="32.0" prefWidth="252.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <CheckBox fx:id="boolBox" alignment="CENTER" mnemonicParsing="false" prefHeight="33.0" prefWidth="108.0" text="Dostępny" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            </children>
+        </GridPane>
+        <ButtonBar layoutX="327.0" layoutY="334.0" prefHeight="55.0" prefWidth="251.0" AnchorPane.bottomAnchor="11.0" AnchorPane.rightAnchor="22.0">
+            <buttons>
+                <Button mnemonicParsing="false" onAction="#handleOk" text="OK" />
+                <Button mnemonicParsing="false" onAction="#handleCancel" text="Cancel" />
+            </buttons>
+        </ButtonBar>
+    </children>
+</AnchorPane>
